@@ -3,7 +3,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:padding="@dimen/padding_large"
+    android:padding="16dp"
     android:gravity="center_horizontal"
     android:background="@color/background_light">
 
@@ -13,10 +13,10 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/title_math_quiz"
-        android:textSize="@dimen/text_large"
+        android:textSize="24sp"
         android:textStyle="bold"
         android:textColor="@color/primary_text"
-        android:layout_marginBottom="@dimen/padding_large" />
+        android:layout_marginBottom="16dp" />
 
     <!-- Numbers row -->
     <LinearLayout
@@ -24,26 +24,46 @@
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         android:gravity="center"
-        android:layout_marginBottom="@dimen/padding_large">
+        android:layout_marginBottom="16dp">
 
         <TextView
             android:id="@+id/tvNumber1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="---"
-            android:textSize="@dimen/text_large"
+            android:textSize="24sp"
             android:textColor="@color/primary_text"
-            android:layout_marginEnd="@dimen/padding_large" />
+            android:layout_marginEnd="24dp" />
 
         <TextView
             android:id="@+id/tvNumber2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="---"
-            android:textSize="@dimen/text_large"
+            android:textSize="24sp"
             android:textColor="@color/primary_text"
-            android:layout_marginStart="@dimen/padding_large" />
+            android:layout_marginStart="24dp" />
     </LinearLayout>
+
+    <!-- User answer label -->
+    <TextView
+        android:id="@+id/tvAnswerLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Votre réponse :"
+        android:textSize="18sp"
+        android:textColor="@color/primary_text"
+        android:layout_marginBottom="8dp" />
+
+    <!-- User answer input -->
+    <EditText
+        android:id="@+id/etAnswer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Entrez votre réponse"
+        android:inputType="numberSigned"
+        android:padding="8dp"
+        android:layout_marginBottom="16dp" />
 
     <!-- Result label -->
     <TextView
@@ -51,20 +71,20 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/label_result"
-        android:textSize="@dimen/text_medium"
+        android:textSize="18sp"
         android:textColor="@color/primary_text"
-        android:layout_marginBottom="@dimen/padding_medium" />
+        android:layout_marginBottom="8dp" />
 
-    <!-- Result value -->
+    <!-- Result / feedback -->
     <TextView
         android:id="@+id/tvResult"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="---"
-        android:textSize="@dimen/text_large"
+        android:textSize="20sp"
         android:textStyle="bold"
         android:textColor="@color/purple_700"
-        android:layout_marginBottom="@dimen/padding_large" />
+        android:layout_marginBottom="16dp" />
 
     <!-- Operation buttons: + - × -->
     <LinearLayout
@@ -72,31 +92,31 @@
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         android:gravity="center"
-        android:layout_marginBottom="@dimen/padding_large">
+        android:layout_marginBottom="16dp">
 
         <Button
             android:id="@+id/btnAdd"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/btn_add"
-            android:layout_margin="@dimen/padding_medium" />
+            android:layout_margin="8dp" />
 
         <Button
             android:id="@+id/btnSub"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/btn_sub"
-            android:layout_margin="@dimen/padding_medium" />
+            android:layout_margin="8dp" />
 
         <Button
             android:id="@+id/btnMul"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/btn_mul"
-            android:layout_margin="@dimen/padding_medium" />
+            android:layout_margin="8dp" />
     </LinearLayout>
 
-    <!-- Generate button -->
+    <!-- Generate new question -->
     <Button
         android:id="@+id/btnGenerate"
         android:layout_width="wrap_content"
