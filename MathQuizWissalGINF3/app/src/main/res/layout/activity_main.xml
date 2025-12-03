@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="@dimen/padding_large"
+    android:gravity="center_horizontal"
+    android:background="@color/background_light">
+
+    <!-- Title -->
+    <TextView
+        android:id="@+id/tvTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/title_math_quiz"
+        android:textSize="@dimen/text_large"
+        android:textStyle="bold"
+        android:textColor="@color/primary_text"
+        android:layout_marginBottom="@dimen/padding_large" />
+
+    <!-- Numbers row -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_marginBottom="@dimen/padding_large">
+
+        <TextView
+            android:id="@+id/tvNumber1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="---"
+            android:textSize="@dimen/text_large"
+            android:textColor="@color/primary_text"
+            android:layout_marginEnd="@dimen/padding_large" />
+
+        <TextView
+            android:id="@+id/tvNumber2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="---"
+            android:textSize="@dimen/text_large"
+            android:textColor="@color/primary_text"
+            android:layout_marginStart="@dimen/padding_large" />
+    </LinearLayout>
+
+    <!-- Result label -->
+    <TextView
+        android:id="@+id/tvResultLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/label_result"
+        android:textSize="@dimen/text_medium"
+        android:textColor="@color/primary_text"
+        android:layout_marginBottom="@dimen/padding_medium" />
+
+    <!-- Result value -->
+    <TextView
+        android:id="@+id/tvResult"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="---"
+        android:textSize="@dimen/text_large"
+        android:textStyle="bold"
+        android:textColor="@color/purple_700"
+        android:layout_marginBottom="@dimen/padding_large" />
+
+    <!-- Operation buttons: + - × -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_marginBottom="@dimen/padding_large">
+
+        <Button
+            android:id="@+id/btnAdd"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/btn_add"
+            android:layout_margin="@dimen/padding_medium" />
+
+        <Button
+            android:id="@+id/btnSub"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/btn_sub"
+            android:layout_margin="@dimen/padding_medium" />
+
+        <Button
+            android:id="@+id/btnMul"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/btn_mul"
+            android:layout_margin="@dimen/padding_medium" />
+    </LinearLayout>
+
+    <!-- Generate button -->
+    <Button
+        android:id="@+id/btnGenerate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/btn_generate" />
+
+</LinearLayout>
